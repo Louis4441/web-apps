@@ -6,6 +6,6 @@
 
 <ul>
     <% for contact in contacts %>
-        <li><%= "#{contact.first_name} #{contact.last_name}" %></li>    
+        <li><%= "#{contact.first_name} #{contact.last_name} - #{contact.company.name}" %></li>    
     <% end %>
 </ul>
