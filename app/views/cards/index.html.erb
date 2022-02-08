@@ -21,13 +21,13 @@
     card2_rank = card2.split("_")[0]
     card2_suit = card2.split("_")[2]
 
-    # if values[card1] > values[card2]
-    #     higher = "The winner is the #{card1_rank} of #{card1_suit.capitalize()}!"
-    # elsif values[card1] < values[card2]
-    #     higher = "The winner is the #{card2_rank} of #{card2_suit.capitalize()}!"
-    # else
-    #     higher = "It's a tie"
-    # end
+    if values[:"#{card1_rank}"] > values[:"#{card2_rank}"]
+        higher = "#{card1_rank} of #{card1_suit.capitalize()}"
+    elsif values[:"#{card1_rank}"] < values[:"#{card2_rank}"]
+        higher = "#{card2_rank} of #{card2_suit.capitalize()}"
+    else
+        higher = "It's a tie"
+    end
 %>
 
 <h1>Drawing cards!</h1>
@@ -35,13 +35,15 @@
 <p>
     <img src="/images/cards/<%= card1 %>.svg">
     <img src="/images/cards/<%= card2 %>.svg"> 
-    <br>
-    <%= values["2"] %>
-    
-
 </p>
 
 <!-- # Now to compare the two cards for higher or lower -->
+
+<h1>Highest card?</h1>
+
+<p>
+    <%= higher %>
+</p>
 
 <p>
     <a href="/cards">Draw again</a>
