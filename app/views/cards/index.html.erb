@@ -22,9 +22,9 @@
     card2_suit = card2.split("_")[2]
 
     if values[:"#{card1_rank}"] > values[:"#{card2_rank}"]
-        higher = "#{card1_rank} of #{card1_suit.capitalize()}"
+        higher = "#{card1_rank.capitalize()} of #{card1_suit.capitalize()}"
     elsif values[:"#{card1_rank}"] < values[:"#{card2_rank}"]
-        higher = "#{card2_rank} of #{card2_suit.capitalize()}"
+        higher = "#{card2_rank.capitalize()} of #{card2_suit.capitalize()}"
     else
         higher = "It's a tie"
     end
