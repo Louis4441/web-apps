@@ -1,0 +1,22 @@
+<!-- any ruby input has to be betweem "<% %>" -->
+<% 
+    fillings = ["Carnitas", "Al Pastor", "Steak", "Chicken"] 
+%>
+
+<h1>I love tacos</h1>
+
+<p>There are so many kinds of tacos!</p>
+
+<!-- 
+# "<%= %>" - this type produces output to the html 
+# only when you want output, use this notation
+#for all others, use regular "<% %>"
+-->
+
+<ul>
+    <% for filling in fillings %>
+        <li><%= filling %></li>
+    <% end %>
+</ul>
+
+<p>Currently there are <%= fillings.count %> kinds of tacos</p>
